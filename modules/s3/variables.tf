@@ -8,3 +8,9 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "enable_public_access" {
+  description = "Whether to allow public read access to the bucket"
+  type        = bool
+  default     = false
+}
