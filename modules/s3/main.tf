@@ -26,6 +26,7 @@ resource "aws_s3_bucket_website_configuration" "react_app" {
 }
 
 resource "aws_s3_bucket_policy" "react_app" {
+  count  = var.enable_public_access ? 1 : 0
   bucket = aws_s3_bucket.react_app.id
   policy = jsonencode({
     Version = "2012-10-17"
