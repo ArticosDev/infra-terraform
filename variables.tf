@@ -16,22 +16,22 @@ variable "environment" {
   default     = "dev"
 }
 
-variable "domain_name" {
-  description = "Primary domain name for the application"
-  type        = string
-}
+# variable "domain_name" {
+#   description = "Primary domain name for the application"
+#   type        = string
+# }
 
-variable "alternative_domains" {
-  description = "Alternative domain names (e.g., www.example.com)"
-  type        = list(string)
-  default     = []
-}
+# variable "alternative_domains" {
+#   description = "Alternative domain names (e.g., www.example.com)"
+#   type        = list(string)
+#   default     = []
+# }
 
-variable "create_dns_zone" {
-  description = "Whether to create a Route53 hosted zone"
-  type        = bool
-  default     = true
-}
+# variable "create_dns_zone" {
+#   description = "Whether to create a Route53 hosted zone"
+#   type        = bool
+#   default     = true
+# }
 
 variable "cloudfront_price_class" {
   description = "CloudFront price class"

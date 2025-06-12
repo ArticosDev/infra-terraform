@@ -17,7 +17,7 @@ resource "aws_cloudfront_distribution" "react_app" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
-  /* aliases             = concat([var.domain_name], var.alternative_domains) */
+  # aliases             = concat([var.domain_name], var.alternative_domains)
 
   default_cache_behavior {
     allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
