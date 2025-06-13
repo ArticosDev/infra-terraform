@@ -7,7 +7,7 @@ terraform {
       version = "~> 5.0"
     }
   }
-}
+} 
 
 # Provider principal
 provider "aws" {
