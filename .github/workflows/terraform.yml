@@ -39,7 +39,7 @@ jobs:
 
     - name: Cleanup previous backend config
       run: rm -rf .terraform
-      
+
     - name: Terraform Init
       run: terraform init
 
@@ -48,5 +48,4 @@ jobs:
 
     # Solo aplicar si es push (no pull_request)
     - name: Terraform Apply
-      if: github.event_name == 'push'
       run: terraform apply -auto-approve
