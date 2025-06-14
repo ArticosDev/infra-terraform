@@ -31,6 +31,9 @@ jobs:
           echo "environment = \"${{ secrets.TF_environment }}\"" >> terraform.tfvars
           echo "cloudfront_price_class = \"${{ secrets.TF_cloudfront_price_class }}\"" >> terraform.tfvars
 
+      - name: Cleanup previous backend config
+        run: rm -rf .terraform
+
       - name: Terraform Init
         run: terraform init
 
